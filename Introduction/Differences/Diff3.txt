@@ -1,0 +1,62 @@
+------------------------------------------------------------------------------------------------------
+									  3)	PLATFORM DEPENDENT VS PLATFORM INDEPENDENT
+-------------------------------------------------------------------------------------------------------
+
+3) C and C++ are platform-dependent programming languages, whereas Java is a platform-independent programming language.
+   ....................................................................................................................
+
+   --> First, we need to understand when a programming language is considered platform-dependent or platform-independent.
+
+   ---> If a programming language allows its applications to be compiled and executed on the same operating system, then that programming language is called a platform-dependent programming language.
+		  Example: C and C++ are platform-dependent programming languages.
+
+   Steps of Compilation and Execution in C and C++:
+   ________________________________________________
+
+	  Writing the Code: Writing the source code in a .c or .cpp file.
+	  Preprocessing: Expanding directives like #include and #define.  
+	  Compilation: Converting the expanded code into assembly code.
+	  Assembly: Translating assembly code into machine code (object code).
+	  Linking: Combining object code and libraries to create an executable file.
+	  Execution: Running the executable file on the operating system.
+
+
+   .c(c program) --> compilation --> .exe(executable file in the form of 01010101) --> execution(c-engine) --> output
+   						windows                                                             windows
+
+    An .exe file contains directly executable code and has a Windows-specific representation. For execution, it requires a Windows execution engine. If Linux is used instead of Windows as the operating system, the .exe file cannot be executed. This is why C and C++ are platform-dependent programming languages.
+
+
+    ---> If a programming language allows its applications to be compiled on one operating system and executed on another operating system, then that programming language is called a 
+    		platform-independent programming language.
+
+   Steps of Compilation and Execution in JAVA
+   ___________________________________________
+
+   .java(java program) --> compilation .class(this file is not directly executable , intermediate code) -->  converter  -> jvm   -> output
+
+			   																											linux os
+
+										   																-->  converter  -> jvm   -> output
+
+										   																				unix os																					
+
+										   																-->  converter  -> jvm   -> output
+
+										   																				solaris os
+
+										   															    -->  converter  -> jvm   -> output
+
+										   																				windows os
+
+   	Note : Java software is platform-dependent, but the Java programming language is platform-independent. Applications developed using Java are platform-independent because of the JVM (Java Virtual
+   			 Machine).
+
+				 If there is a Linux JVM, it requires a Linux representation of the .class file. However, the JVM uses a converter to translate the .class file into the required Linux representation.
+
+   	Q) what is the difference between .exe and .class file?
+
+	   	.exe file is generates in c and c++ and .class file generates in java pl.
+	   	.exe file able to product direct executable code but java doesnot provide direct executable code.
+	   	.exe file is platform dependent file but .class file is platform independent file.
+	   	.exe file is able to provide less security and .class file is able to provide more security.

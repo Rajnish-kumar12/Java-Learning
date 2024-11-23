@@ -1,0 +1,107 @@
+------------------------------------------------------------------------------------------------------
+									 6) OPERATOR OVERLOADING
+------------------------------------------------------------------------------------------------------
+Operator overloading is not possible in Java but possible in c++
+................................................................
+--> First of all, what is operator overloading? What is the meaning of operator overloading, and why is it not possible in Java?
+
+--> As we know, everything in Java is stored in objects, and for this, we have some conventions, which are listed below.
+
+	 	Class
+		Object
+		Abstraction
+		Encapsulation
+		Polymorphism
+		Inheritance
+		Message Passing
+
+--> Operator overloading comes under polymorphism, so we need to understand what polymorphism
+
+Polymorphism
+____________
+
+Polymorphism means 'poly' = many and 'morphism' = forms or structures.
+It means that if one thing exists in more than one form, it is called polymorphism.
+
+Note:The main advantage of polymorphism is flexibility.
+
+Polymorphism has two types:
+a) Static Polymorphism
+b) Dynamic Polymorphism
+
+a)Static Polymorphism : If polymorphism exists at compile time, it is called static polymorphism.
+								Ex: Overloading.
+
+b)Dynamic Polymorphism : If polymorphism exists at runtime, it is called dynamic polymorphism.
+								 Ex: Method Overriding.
+
+--> There are two types of overloading:
+1) Method overloading
+2) Operator overloading
+
+1) method overloading : If we declare more than one method with the same name but with a different parameter list.
+Ex: 
+
+	class A {
+	    void add(int i, int j) {
+	        System.out.println(i + j);
+	    }
+
+	    void add(float f1, float f2) {
+	        System.out.println(f1 + f2);
+	    }
+
+	    void add(String s1, String s2) {
+	        System.out.println(s1 + s2);
+	    }
+	}
+
+	In the above example, the method name is the same, but the list of parameters is different. This is an example of method overloading, and it is supported in Java.
+
+2) Operator Overloading : If we declare an operator with more than one functionality, it is called operator overloading.
+Ex:
+
+	class Main {
+	    public static void main(String[] args) {
+	        int a = 10;
+	        int b = 20;
+	        int c = a + b;  // + is for arithmetic addition
+	        System.out.println(c); // Output: 30
+
+	        String s1 = "abc";
+	        String s2 = "def";
+	        String s3 = s1 + s2; // + is for concatenation
+	        System.out.println(s3); // Output: abcdef
+	    }
+	}
+
+	Above concept is called operator overloading.
+
+Q) Why is operator overloading not possible in Java?
+
+--> Operator overloading is a rarely used feature in application development, which is why Java does not focus on this feature.
+
+--> If we declare more operators with multiple functionalities, operator overloading could create confusion for developers in tracking which operator is performing which 
+	 operation.
+
+	 Then one question above operator overloadig code is possible in java or not?
+
+--> yes, above code is possible in java beacuse in java + is used for sum as well for concatenation. then how operator overloading is not possible in java.
+
+Note: In java as per java internal requirement, java made some of the  operators like +,*,/,... are decalred as overloaded operators with fixed 
+		functionality, but java has not provided any env to perform operator overloading expilicitely developers level.so expilicitely operator overloaded are not possible in java but implicitely few operator are declared as overloaded operator ex +.
+
+Note: The code example you provided, where the + operator is used for both arithmetic addition and string concatenation, is possible in Java, but it is not an example of 
+		operator overloading.
+
+		In Java, operator overloading is not supported. However, the + operator behaves differently depending on the operand types:
+
+		For primitive types (e.g., int, float), the + operator performs arithmetic addition.
+		For objects (e.g., String), the + operator performs concatenation.
+		Java does not allow you to define new behaviors for operators for custom types (like classes). This is what operator overloading means in languages like C++ or Python, but Java does not support this feature.
+
+		So, to clarify:
+		The same + operator behaves differently based on the type of the operands.
+		This is not operator overloading because Java does not allow defining new behaviors for operators with custom types.
+
+Java doesn't support operator overloading at all for user-defined types. Operators such as +, -, etc., are only defined for primitive types and can only be used for their predefined behavior. Java does not allow overloading or changing this behavior for custom classes.

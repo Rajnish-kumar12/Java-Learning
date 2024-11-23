@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------------------------------
+									1)  STATIC VS DYNAMIC  (C , C++ , JAVA)
+-------------------------------------------------------------------------------------------------------
+
+C and C++ are static programming languages, whereas Java is a dynamic programming language.
+...........................................................................................
+
+ -> First, we need to understand which programming languages are static or dynamic. 
+
+   	Static: If the memory allocation for primitive data types occurs at compilation time, then it is considered a static programming language.
+
+   	Dynamic: If the memory allocation for primitive data types occurs at runtime, then it is considered a dynamic programming language.
+
+		In C and C++, memory for primitive data types is allocated at compilation time, while in Java, it is allocated at runtime. That’s why C and C++ are considered static programming languages, whereas Java is a dynamic programming language.
+
+		Note: Here, we are talking about primitive data types because memory is allocated for primitive data types by default.
+
+		Note: Java is also an object-oriented programming language, so in Java, everything is in the form of objects. Memory is allocated at the time of object creation, and since objects are created at runtime, memory allocation also happens at runtime.
