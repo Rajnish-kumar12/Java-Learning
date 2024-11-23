@@ -1,0 +1,63 @@
+-------------------------------------------------------------------------------------------------------
+									  2) PRE-PROCESSOR
+-------------------------------------------------------------------------------------------------------
+
+A pre-processor is required in C and C++, but it is not required in Java.
+.........................................................................
+
+  -> First, we need to understand what a pre-processor is and what role it plays.
+  	  Note: The pre-processor is the first phase of compilation.
+ Q) what is the job of the preprocessor?
+
+ -> In C and C++, predefined libraries exist. To include these predefined libraries, the preprocessor is used with the #include <> statement. For example:
+
+	#include <stdio.h>  // Includes the standard input/output library
+	#include <iostream>  // Includes the input/output stream library in C++
+
+
+  -> First of all, the preprocessor will recognize all of the #include statements provided in the program. It will then take all the header file names from
+     the #include statements. After that, it will search for the specified or required header files in the C or C++ software. If the specified header files do not exist, an error will be generated. If the specified header files exist, the preprocessor will load all the header files that are specified.
+  	
+  	Note: Loading pre-defined libraries at compilation time is called static loading. Hence, C and C++ support static loading.
+
+  Here’s the updated version of your conclusion:
+
+  **Conclusion:** In C and C++, the pre-processor is required to recognize `#include <>` statements in order to load the header files' content into memory.
+	  
+  IN Java:
+
+  A complete predefined library exists in the form of classes and interfaces, and these classes and interfaces are organized inside packages.
+  For example: java.io, java.lang, java.sql, java.util, etc.
+
+  So, to use these packages, we need to include them, which is done using the import statements.
+
+  For example, import java.io.*; means import all the classes and interfaces from the java.io package.
+
+  When we compile a Java program, the job of the compiler is:
+
+  --> The compiler will recognize all import statements.
+  --> The compiler will take the specified names from the import statements.
+  --> The compiler will check the Java software to verify whether the specified packages exist or not.
+  --> If the packages do not exist, it will raise an error.
+  --> If the packages exist, it will not raise any error, but it will not load the packages into memory.
+
+ 	When we execute a Java program, the job of the JVM is:
+
+ 	--> When the predefined packages are identified by the JVM, it will load the respective classes or interfaces of the packages into memory.
+
+    Note: In Java applications, predefined libraries (packages) are loaded by the JVM as per the requirement. This type of loading of predefined libraries 
+          at runtime is called dynamic loading.
+
+Conclusion: In Java, the preprocessor is not required because #include statements do not exist.
+
+Q) What are the differences between #include and import statements?
+
+ #include statements exist in C and C++, but import statements exist in Java.
+
+ #include statements are used to include predefined libraries that exist in header files, but import statements are used to include predefined libraries 
+  that exist in classes and interfaces in the form of packages.
+
+ #include statements are recognized by the preprocessor, but import statements are recognized by both the compiler and the JVM. #include statments 
+  supporting static loading but import statements support dynamic loading.
+
+ #By using a single #include statement, only one predefined library can be included, but by using an import statement, more than one class or interface from the same package can be included.

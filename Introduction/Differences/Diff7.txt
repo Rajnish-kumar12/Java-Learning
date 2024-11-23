@@ -1,0 +1,15 @@
+------------------------------------------------------------------------------------------------------
+									 7) DESTRUCTORS
+------------------------------------------------------------------------------------------------------
+Destructors are existed in java but not in c++
+..............................................
+
+--> For this we have to know about what is destructors and why it is used.
+ 	 A destructor is a special function in programming that's automatically called when an object is destroyed or goes out of scope.
+	 Used to destroy the object.
+
+--> In java to destory objects automatically and internally, java has provided an implicit tool in the form of "Garbage Collector".
+
+--> In c++ no garbage collector kind of component, where developers must take explicit responsibility to destroy objects, it is mandatory to use destructors in c++.
+
+--> java memory management is good.

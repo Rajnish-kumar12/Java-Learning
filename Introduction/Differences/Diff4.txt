@@ -1,0 +1,78 @@
+------------------------------------------------------------------------------------------------------
+									 4) POINTERS
+------------------------------------------------------------------------------------------------------
+
+4) Pointers exist in C and C++, but pointers do not exist in Java.
+   ...............................................................
+
+   --> First, we need to understand what a pointer is and the nature of pointers.
+
+   	  -> A pointer is a variable that stores the memory address of a data structure, where the data structure can be an array, variable, or structure.
+   	  -> In general, pointer variables are recognized and initialized at the time of compilation.
+
+				eg) int a = 10;
+				int *p; // Declaration of pointer variable
+				p = &a;  // The address of variable 'a' is stored in pointer 'p'
+
+   Q) Why do pointer variables not exist in Java?
+
+   --> As we know, pointer variables require memory allocation at compile time, meaning they require static memory allocation. However, Java follows
+       dynamic memory allocation,
+       which is why pointer variables do not exist in Java.
+
+   --> Pointers are supported by static programming languages only, whereas Java is a dynamic programming language, which is why it does not support 
+   	 pointers.
+
+   --> pointers variables are very much suitable for platform dependent programming languages but java is a platform independent programming languages.
+
+   --> Pointer variables are suitable for platform-dependent programming languages, but Java is a platform-independent programming language, which is why 
+   	 it does not support
+       pointers.
+
+   --> Pointers can be a confusing feature, but Java is designed to be a simple programming language that minimizes confusion for developers.
+
+   Q) In C and C++ applications, a variable refers to a block of memory, so that variable is a pointer variable. Similarly, in Java applications, when we create an object for
+    	a particular class, a variable refers to a block of memory called an object. So, why don't we call that variable a pointer variable? How can we say that pointers do not exist in Java?
+
+   	--> In the case of java
+
+				class A {
+				    // Some members: variables and methods
+
+				    A a = new A();  // Creates an object of class A and refers to it using variable 'a'
+				}
+ 
+
+		   	first understand how object are created in java.
+		   	_______________________________________________
+
+				First, let's understand how objects are created in Java:
+
+				As we know, the JVM executes the Java program. In Java, heap memory management is used, and there is a heap manager that controls the heap memory.
+
+				When the JVM encounters the new keyword, it proceeds as follows:
+
+				The JVM identifies the respective class (e.g., class A) and recognizes its instance variables and their data types.
+				Based on the data types, the JVM determines the amount of memory required to create an object of this class.
+				Once the size is determined, the JVM sends a request to the heap manager to allocate memory for the object with the required size.
+				The heap manager receives the memory size request and searches for a block of memory in the heap.
+				The required block of memory is allocated, and this block is considered the object in the heap memory.
+				Once the object is created, the heap manager assigns a unique identity value, which is an integer. This value is called a hash code. It is important to note that this hash code is not the address of the object in memory.
+
+				The heap manager sends this hash code value to the JVM. The JVM then converts this hash code into a hexadecimal form, known as the reference value.
+
+				The JVM assigns this reference value to the variable (e.g., a). This reference value does not represent the actual memory address of the object.
+
+				This is why we say pointers do not exist in Java: The reference variable is not storing the memory address; it only holds the reference value, which is different from a pointer in languages like C or C++.
+
+
+
+   	Q) What are the differences between pointer variables and reference variables?
+
+   	--> Pointer variables are variables that can refer to a block of memory by storing its memory address. On the other hand, reference variables refer 
+   		 to a block of memory (an object) by storing an object reference value, which is the hexadecimal form of the object's hash code. The hash code is a unique identity assigned by the heap manager to recognize the object individually.
+
+   	--> Pointer variables require static memory allocation, meaning the memory is allocated at compile time. In contrast, reference variables require 
+   		 dynamic memory allocation, where memory is allocated at runtime by the JVM's heap manager.
+
+   	--> Pointer variables are existed in C and C++, but reference variables are existed in Java.

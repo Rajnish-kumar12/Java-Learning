@@ -1,0 +1,120 @@
+------------------------------------------------------------------------------------------------------
+									5) MULTIPLE INHERITANCE
+------------------------------------------------------------------------------------------------------
+
+5) Multiple inheritance does not exist in Java, but it exists in C++.
+   ..................................................................
+
+   --> First, we need to understand what multiple inheritance is, what the need for multiple inheritance is, and why it is not available in Java.
+
+   --> In object-oriented programming languages, data is stored in the form of objects. While representing data in the form of objects, we follow a set of conventions, and this set of conventions is
+       known as object-oriented features.
+
+		Class
+		Object
+		Abstraction
+		Encapsulation
+		Polymorphism
+		Inheritance
+		Message Passing
+
+   	But we have to study inhertance as of now so lets start and need to know why the multiple inheritance not applicable in java.
+
+	   	 Inheritance
+	   	 ____________
+	   	 --> It is a relation between classes that allows variables and methods from one class (superclass or parent class) to be used by another class (subclass or child class) using extend keyword.
+	   	 --> An advantage of inheritance is code reusability.
+	   	 --> Declared once and used in many subclasses.
+
+   	 	 Types of Inheritance:
+
+	   	 a) Single Inheritance
+	   	 b) Multiple Inheritance
+
+	   	 c) Multilevel Inheritance
+	   	 d) Hybrid Inheritance
+	   	 e) Hierarchical Inheritance
+
+	   	 So, we need to understand single inheritance and multiple inheritance.
+
+	   	 	--> Single Inheritance
+	   	 	    It is a relationship between classes , it will bring variables and methods from only one super class to one or more no of sub class.
+
+					 class A {
+					    int i = 10;
+
+					    void m1() {
+					        // Method body (not defined in the provided code)
+					    }
+					 }
+
+					 class B extends A {
+					    {
+					        i++; // Instance initializer block
+					        m1(); // Calling method m1
+					    }
+					 }
+
+					 class C extends A {
+					    {
+					        i--; // Instance initializer block
+					        m1(); // Calling method m1
+					    }
+					 }
+					 In the above example, class B uses the variables and methods of class A, and similarly, class C uses the variables and methods of class A. This is called single inheritance, where the subclass has only one superclass.
+
+
+	   	 	--> Multiple Inheritance
+	   	 		 It is a relationship between classes where variables and methods are inherited from multiple superclasses to one or more subclasses.
+
+
+				    class A {
+				      int i = 10;
+
+				      void m1() {
+				          // Method body (not defined in the provided code)
+				      } 
+				    }
+
+				    class B {
+				      int j = 20;
+
+				      void m2() {
+				          // Method body (not defined in the provided code)
+				      }
+				    } 
+
+				    class c {
+
+				   	i++;
+				   	j++;
+				   	m1();
+				   	m2();
+
+				    }
+				    The above example is called multiple inheritance, but this does not exist in Java. See below for why.
+
+				    class A {
+				      int i = 10;
+
+				      void m1() {
+				          // Method body (not defined in the provided code)
+				      } 
+				    }
+
+				    class B {
+				      int i = 20;
+
+				      void m1() {
+				          // Method body (not defined in the provided code)
+				      }
+				    } 
+
+				    class c {
+
+				   	i++;
+				   	m1();
+				   	m2();
+
+				    }
+				    In the above scenario, if we apply multiple inheritance, it would be unclear which class's variable (Class A or Class B) would be incremented in Class C. Similarly, it would be ambiguous which class's method (Class A or Class B) would be called in Class C. This ambiguity is not allowed in Java, as Java avoids such conflicts. Therefore, Java removes the feature of multiple inheritance.

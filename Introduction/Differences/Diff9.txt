@@ -1,0 +1,34 @@
+------------------------------------------------------------------------------------------------------
+									 9) MEMORY ALLOCATION
+------------------------------------------------------------------------------------------------------
+In c and c++, Integers will take 2 bytes of memory and character will take 1 bytes of memory, but, In java, Integers will take 4 bytes of memory and characters will takes 2 bytes of memory.
+
+--> In c and c++, memory allocation for the premitive data type is not fixed, it is variable, it is depending on the operating system which 
+	 we used.
+
+--> In java, memory allocation for the premitive data type is fixed, its not depend on the operating system.
+
+	 Byte   --> 1bytes
+	 Short  --> 2bytes
+	 Int    --> 4bytes
+	 Long   --> 8bytes
+	 Float  --> 4bytes
+	 Double --> 8bytes
+	 Char   --> 2bytes
+	 Boolean--> 1bit
+
+Q) In the c and c++, characters are able to take only 1 byte of memory then what is the requirement for java to assign 2 bytes of memory for 
+	characters?
+
+	--> In c and c++, all characters are represented in the form of ascii values, and for ascii values 1 byte of memory is sufficient but in
+		 case of java all the characters are represented in the form of UNICODE representation and for unicode 2 byte of memory is sufficient.
+
+Q) What is UNICODE and what is its requirement in java?
+
+	--> UNICODE representation is one the character representation, it able to represent all the alphabet from all the natural languages like
+		 english,hindi,italian,etc.
+		 with this represent it able to provide very good internationalization (i18n).
+
+Q) What is the meaning i18n?
+
+	--> Designing java application as per locale conventions is called internationalization.
