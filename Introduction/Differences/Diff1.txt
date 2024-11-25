@@ -1,5 +1,4 @@
--------------------------------------------------------------------------------------------------------
-									1)  STATIC VS DYNAMIC  (C , C++ , JAVA)
+				1)  STATIC VS DYNAMIC  (C , C++ , JAVA)
 -------------------------------------------------------------------------------------------------------
 
 C and C++ are static programming languages, whereas Java is a dynamic programming language.
