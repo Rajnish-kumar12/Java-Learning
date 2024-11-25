@@ -1,6 +1,5 @@
-------------------------------------------------------------------------------------------------------
-									  3)	PLATFORM DEPENDENT VS PLATFORM INDEPENDENT
--------------------------------------------------------------------------------------------------------
+				3) PLATFORM DEPENDENT VS PLATFORM INDEPENDENT
+---------------------------------------------------------------------------------------------------------------
 
 3) C and C++ are platform-dependent programming languages, whereas Java is a platform-independent programming language.
    ....................................................................................................................
@@ -35,19 +34,19 @@
 
    .java(java program) --> compilation .class(this file is not directly executable , intermediate code) -->  converter  -> jvm   -> output
 
-			   																											linux os
+			   																																					linux os
 
-										   																-->  converter  -> jvm   -> output
+										   																												-->  converter  -> jvm   -> output
 
-										   																				unix os																					
+										   																														unix os																					
 
-										   																-->  converter  -> jvm   -> output
+										   																												-->  converter  -> jvm   -> output
 
-										   																				solaris os
+										   																														solaris os
 
-										   															    -->  converter  -> jvm   -> output
+										   															    													-->  converter  -> jvm   -> output
 
-										   																				windows os
+										   																														windows os
 
    	Note : Java software is platform-dependent, but the Java programming language is platform-independent. Applications developed using Java are platform-independent because of the JVM (Java Virtual
    			 Machine).
