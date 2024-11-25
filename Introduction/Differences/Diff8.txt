@@ -1,5 +1,4 @@
-------------------------------------------------------------------------------------------------------
-									 8) CALL BY VALUE AND CALL BY REFERENCE
+					8) CALL BY VALUE AND CALL BY REFERENCE
 ------------------------------------------------------------------------------------------------------
 c and c++ are follow call by value and call by reference parameter passing mechanism, but, java is following only call by value parameter passing mechanism.
 
@@ -11,5 +10,6 @@ c and c++ are follow call by value and call by reference parameter passing mecha
 
 --> In c and c++, If we pass pointer variable as parameters then it is called call by reference, In c and c++ pointer variable are able to 
 	 store address location directly.
-	 In case of java even if we pass object reference variable as parameters to the method then the parameter passing mechanism is call by value only not call by reference why because object reference varibale is not storing address location, object reference variable is able to store the object reference value, where object reference value is hexa decimal form of hash code, where hashcode is an unique identity provide by the heap manager in the form of an integer value.
+	 In case of java even if we pass object reference variable as parameters to the method then the parameter passing mechanism is call by value only not call by reference why because object reference 	 varibale is not storing address location, object reference variable is able to store the object reference value, where object reference value is hexa decimal form of hash code, where hashcode is 
+         an unique identity provide by the heap manager in the form of an integer value.
 
