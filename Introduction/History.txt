@@ -16,14 +16,14 @@
 	3) An architecturally neutral programming language
 
 1) Simple programming language:
-	...........................
+   ............................
 
 	-> Less execution time (higher performance)
 	-> Less memory consumption (cost optimization)
 	-> Less power consumption (cost optimization, less maintenance cost):
 
 2) tight coded programming language
-	................................
+   ................................
 
 	In C:
 	a) push = 20 lines of code
@@ -44,7 +44,7 @@
 	Hence, C is a loosely coded programming language, and Java is a tightly coded programming language.
 
 3) Architecturally neutral programming language:
-	.............................................
+   .............................................
 
 	-> An architectural neutral programming language is one that can run on any hardware platform or operating system without modification. The code written in such a language is independent of the 
 		underlying system architecture.
