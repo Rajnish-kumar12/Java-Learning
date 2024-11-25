@@ -1,5 +1,4 @@
-------------------------------------------------------------------------------------------------------
-									 9) MEMORY ALLOCATION
+						9) MEMORY ALLOCATION
 ------------------------------------------------------------------------------------------------------
 In c and c++, Integers will take 2 bytes of memory and character will take 1 bytes of memory, but, In java, Integers will take 4 bytes of memory and characters will takes 2 bytes of memory.
 
