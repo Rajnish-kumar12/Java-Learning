@@ -1,0 +1,105 @@
+                               Feature Part-1
+---------------------------------------------------------------------------------------------------------
+To Describe Java Programming Languages nature, Java Programming Has Provided a set of features.
+
+1) Simple.
+2) Object Oriented.
+3) Platform Independent.
+4) Architectural Neutral.
+5) Portable.
+6) Robust.
+7) Dynamic.
+8) Secure.
+9) Multithreaded.
+10 Distributed.
+11) Interpretive.
+12) High Performance.
+
+1) Simple Programming Language
+................................
+
+   --> Java Application are Simple Programming language because:
+
+   	   -> It takes less memory and less execution time.
+   	   -> It removes all the ambiguity or confusion related concepts like, pointers, multiple inheritance, operator overloading 
+   	   	  etc.
+   	   -> Java using all the simplified syntax from c and c++.
+
+2) Object Oriented Programming Language
+........................................
+
+   --> Java is an object oriented programming language because, Java allows to represent data in the form of objects only, as per object 
+   	   oriented features.
+
+3) Platform Independent Programming Language
+...............................................
+
+   --> Java is platform independent programming language because it allows its applications to compile on one operating system and
+   	   can execute on another operating systems.
+
+4) Architectural Neutral Programming Language
+................................................
+
+   --> Java is architectural neutral programming language because it allows its application to perform compilation on one
+   	   hardware system and perform execution on another hardware system.
+
+5) Portable
+.............
+
+   --> Java is portable because, it allows its application to execute under all the operating systems and under all the hardware
+   	   systems.
+
+   --> Java is able to provide fixed memory allocations for the premitive data types irrerespective of the OS and the processor
+   	   which we used.
+
+6) Robust
+...........
+
+   --> Java is having very good memory management system in the form of heap memory management system, It is dynamic memory
+   	   management system, It able to allocate and deallocate memory for the objects at runtime as per appliucation requirements.
+
+   --> Java is provide very good predefined library for the exception handling.
+
+7) Dynamic
+.............
+
+   --> Java is dynamic programming languages, Java allows memory allocations for premitive data type at run time, not at
+   	   compilation time.
+
+8) Secure
+.............
+
+   --> Java is Secure because java is very good at three level security.
+
+   	   1) Implicit  Security : Security manager inside jvm.
+   	   2) Web security : JAAS(Java Authentication and Authorization Services).
+   	   3) Network Security : Java has provided predefined implementations for all network security algorithm which we are using
+   	   						 frequently in java applications.
+
+9) Multithreaded
+..................
+
+   --> Java is following multi threaded model, 	Java is able to provide very good environment to create  and execute more than
+   	   one thread at a time.
+
+10) Distributed
+...................
+
+	--> Java Distributed PL, because, Java has provided a seperated module to prepare Distrubuted Applications that is
+		"J2EE/JAVA EE".
+
+11) Interpretive
+....................
+
+	--> Java is both compilative and interpretive programming language:
+
+		-> Java is compilative because to translate program from high level to machine code we use compiler, and to check
+           developer syntax mistake also use compiler which find the error.
+
+        -> Java interpreter is used to execute java applications, and iterpreter is inside "JVM", Hence java is interpretive.
+
+12) High Performance
+.......................
+
+	--> It is rich set of feature like portable, robust, dynamic, distributed etc.
+	--> Its internal components like JIT compiler inside jvm.
