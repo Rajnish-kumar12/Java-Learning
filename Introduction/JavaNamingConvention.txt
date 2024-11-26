@@ -1,0 +1,37 @@
+                                           Java Naming Conventions
+----------------------------------------------------------------------------------------------------------------
+Java is strictly case sensitive programming language, there is seperate recognition of lower case letters and for upper case letters.
+eg : a != A.
+
+1) All classes name, abstract classes name, interface name , enums name must started with uppercase letter, also subsequent letter must
+   started with uppercase letter.
+
+   eg : String
+		StringBuffer
+		InputStreamReader etc
+
+2) All varibales name started with small case letter and subsequent letter started should be uppercase letter.
+
+   eg : in, out, err
+	    pageContext
+		bodyContext
+		tempEmpAddress
+
+3) All methods name started with lowercase letter and subsequent letter must started with uppercase letter.
+
+	eg : concat();
+		 forName();
+		 getInputStream();
+
+4) All constant name must be in upper case letter.
+	eg : MIN_PRIORITY;
+		 MAX_PRIORITY;
+		 NORM_PRIORITY;
+
+5) All java packages name must be provided in lowercase letter.
+	eg : java.util;
+		 java.sql;
+		 java.awt.event;
+		 javax.servlet.jsp.tagext;
+
+NOTE : All these conventions are mandatory for predefined library, but, these conventions are optional for user defined library, suggestable.
