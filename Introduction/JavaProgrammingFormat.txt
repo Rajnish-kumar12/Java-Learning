@@ -1,0 +1,265 @@
+                                       Java Programming Format
+---------------------------------------------------------------------------------------------------------------
+1) Comment Section --> optional
+2) Package Section --> optional
+3) import Section  --> optional
+4) Class/Interfaces Section --> optional
+5) Main Class Section --> after java-6 version it is mandatory to have main class.
+
+1) Comment Section
+....................
+
+--> In java application development, before starting implementation part, it is convention to provide some details of the application or
+	implementation like Author name, Objective, Project Details.
+
+--> To provide these type of description in java applications we have to use comment section, where we have to use comments.
+
+--> There are three types of comments in java
+	
+	a) Single line comment
+	_______________________
+
+	-> It allows the complete description with in single line. 
+	   Syntax : //-------description--------
+`
+	b) Multi line comment
+	______________________
+
+	-> It allows the complete description with in multiple lines.
+	   Syntax : /*
+	   			----------description-----------
+	   			----------description-----------
+	   			----------description-----------
+	   			----------description-----------
+	   			*/
+
+	c) Document comment
+	____________________
+
+	-> It allows complete description in more than one page.
+	   Syntax : /**
+	   			*----
+	   			*----
+	   			-----
+	   			-----
+	   			*----
+	   			*/
+
+In general, we will use documentation comment in API documentation.Api documentation, is the document in the form of text doc or .doc file
+or HTML file, or a pdf file, it is able to provide declarative information about the programming elements like classes, interfaces, variables,
+methods, constructors etc which we have used in java applications.
+
+eg) public class Employee{
+	public String eid;
+	protected String ename;
+	public float esal;
+	String eaddr;
+
+	public Employee(){
+
+	}
+	public Employee(String eid){
+
+	}
+	public Employee(String eid, String ename){
+
+	}
+	public Employee(String eid, String ename, float esal){
+
+	}
+	public Employee(String eid, String ename, float esal, String eaddr){
+
+	}
+
+	public void add(String eid, String ename, float esal, String eaddr){
+
+	}
+	public void search(String eid){
+
+	}
+	public void update(String eid, String ename, float esal, String eaddr){
+
+	}
+	public void delete(String eid){
+
+	}
+}
+
+In example lets assume this is Api so for this Api we have to write document comments like below:
+
+Class Name : Employee
+Access Modifiers : public
+Super class : java.lang.object
+interfaces : java.io.serializable, java.lang.cloneable
+variable : eid, ename, esal, eaddr
+constructors : Employee, Employee, Employee, Employee, Employee
+Methods : add, search, update, delete
+
+variables:
+eid:---------some description------------
+ename:-------some description------------
+esal:--------some description------------
+
+methods:
+add:
+Name:add
+access modifier:public
+return type:void
+parameter:eid, ename, esal, eaddr
+throws exception:something 
+like we have to write api documetation for all the methods also 
+
+Note : Using documentation comments for Api documentation is not suggestable.
+	   To simplify the prepare API documentation, Java have provided a predefined command "javadoc", this provide api documentation of our program in the form of "HTML" files
+
+	   step - go in program path and run the command javadoc Employee.java
+
+To provide description/metadata in java applications JDK1.5 version has provided a new feature called "Annotations".
+
+Interview question : In java applications we have already comment then what is the requirements of "Annotations"?
+
+				     Ans : If we provide description in java application in the form of comments then the comments and its description will be removed by
+				     	   "lexical analysis" phase as part of the compilation, it may not be availbale to the generated .class file and upto runtime of the applications.
+				     	   As per the requirement, if we want to bring description or meta data upto .java file, upto .class file and upto runtime of our application  we need "Annotations".
+
+Interview question : In java application to bring meta data upto runtime we have xml documents then what is the requirement to use Annotations?
+						
+					 Ans : If we use xml documents the below :
+
+					 	   we must learn xml tech and many things we have to consider if we use xml documents so, for over come this problem java provide 
+					 	   Annotations.
+
+NOTE : In JAVA/J2EE applications, we are able to use annotations as an alternative to xml documents.
+
+
+XML based tech                            |                         Annotations based Tech(xml is optional) 
+-------------------------------------------------------------------------------------------------------------
+upto jdk1.4								  |							jdk1.5 and above
+jdbc3.0									  |							jdbc4.0 and above
+servlets2.xml							  |								servlets3.x
+struts 1.xml							  |								structs2.x
+jsf1.xml								  |								jsf2.x
+ejbs2.xml								  |								ejbs3.x
+spring2.4								  |							    spring2.5
+
+
+
+ 
+                                            Package Section
+---------------------------------------------------------------------------------------------------------------------------------
+--> Package is the collection of related classes and interfaces in a single unit.
+--> Package is a folder contain .class file representing related classes and interfaces.
+
+eg : java.io
+	 java.sql
+	 java.awt.event
+	 java is a folder and following is a subfolder and inside that subfolder all the related classes and interfaces are present.
+
+In java applications, Packages are able to provide the followinf advantages:
+
+Modularity
+Abstraction
+Security
+Sharability
+Reusability
+
+In java there are two types of Packages:
+pre-defined packages
+user-defined packages
+
+1) pre-defined packages
+__________________________
+Packages which is defined by java, and these packages are provided along with java software. These packages are already declared so no need to declare again
+use direclty.
+EX: java.io
+	java.awt
+	java.sql
+
+2) user-defined packages
+__________________________ 
+Packages which is defined by developer as per their requirements. To declare user-defined packages below is the syntax.
+package package_Name;
+where package_Name may be single name or the combination of parent package name and child package name.
+Ex : Package p;
+	 Package P1.P2.P3;
+
+NOTE : To use package declaration statement we have to follow these conditions:
+
+	   1) Package declaration statement must be of first statement of java files.
+	   2) Package name must be unique.
+
+NOTE : In one java files it is not advisable to declare more than one packages.
+
+
+
+
+
+                                           
+                                     Import Section
+--------------------------------------------------------------------------------------------------------------
+If we want to access classes and interfaces of a particular package into present java file then we have to import the package to the present JAVA file.
+To import packages into the present java file we have to types of syntax.
+1) import package_name.*;
+--> It able to import all classes and interfaces of particular packages into the present java file.
+Ex : import java.io.*;
+	 import java.util.*;
+
+2) import package_name.member_name;
+--> It able to import respective class or interface of particular package into the present java file.
+EX : import java.io.BufferReader; BufferReader is a class name of io package.
+	 import java.sql.connection;
+
+
+NOTE : It is possible to import more than one packages in single java file.
+EX : abc.java is a file name
+	 import java.io.*;
+	 import java.util.*;
+	 import java.lang.*;
+
+NOTE : It is possible to access the classes and interfaces of the package without import statement, but that is not a good practise.
+
+with import statment
+_____________________
+import java.io.*
+
+BUfferReader br = new BufferReader(new InputStreamReader(Sysem.in));
+
+without import statment
+________________________
+
+java.io.BUfferReader br = new java.io.BufferReader(new java.io.InputStreamReader(Sysem.in));
+
+
+                           
+                           				Classes/Interfaces section
+-----------------------------------------------------------------------------------------------------------------
+The main intentions of classes and interfaces in java applications is to represent all real world entities.
+EX : Student, Employee, Customer, Account, Product, Transaction, ......
+
+We can write more than one class and interface in one file as per requirement.
+
+NOTE : In real time application developement, we will prepare is single class per java file.
+
+class Employee{
+	
+	-------variable and methods-----------
+
+}
+
+interface EmployeeServices{
+	
+	------variable and methods------------
+
+}
+
+
+
+
+                                          Main Section
+---------------------------------------------------------------------------------------------------------------
+If any java class contain main method then that java class is called as Main class.
+
+What is the requirement to write main() in java application?
+
+--> To define logic in java applications we need main() method.
+--> To define starting point and ending point to the application execution we nedd main().
