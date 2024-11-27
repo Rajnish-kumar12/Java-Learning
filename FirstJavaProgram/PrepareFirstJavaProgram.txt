@@ -1,0 +1,168 @@
+                                    STEPS TO PREPARE FIRST JAVA APPLICATION
+----------------------------------------------------------------------------------------------------------------------------
+1) Install Java Software
+2) Install Java Editor
+3) Write Java Program
+4) Save Java File
+5) Compile Java File
+6) Execute Java Application
+
+
+1) Install Java Software
+__________________________
+
+Install all required versions
+set the path permanent from environment variables.
+we can install all version in single machine based on requirement.
+we can set all versions in path environment variable.
+then set single version to the environment variable.
+then one queston is that which version is get in command prompt.
+--> which version is specified first one in environment variable that is comes in command prompt.
+
+2) Install Java Editor
+_________________________
+
+3) Write Java Program
+_________________________
+
+To prepare basic Program we need some predefined library provided by java API.
+
+To prepare very fundamental program one is main class and inside main class main method is required, and to display anything on console required System.out.println(Data).
+
+
+class FirstApp
+{
+    public static void main(String args[])
+    {
+        System.out.println("First Java Application");
+    }
+}
+
+class => Keyword.
+public, static => access modifier.
+First App => user defined class name or main class name.
+void => return type.
+main => method name.
+String => Predefined class.
+args => user defined variable.
+System => Predefined class.
+out => reference variable.
+println() => predefined method to send data to console or command prompt.
+First Java Application => Text data.
+
+4) Save Java File
+_______________________
+
+To Save Java files we have to folow the following conditions:
+
+1) If the present Java file contains any public class, public abstract class, public interface, public enum then it is necessary to save java file with public element name.
+
+Ex: public class FirstApp
+	{
+	    public static void main(String args[])
+	    {
+	        System.out.println("First Java Application");
+	    }
+	}
+	In above example class name is public so it is mandatory to save its file name with name "FirstApp.java".
+
+2) If no public element is existed in present java file then it is possible to save java file with any name like abc.java or anything, but it is advisable to save with the main class name.
+
+
+NOTE : It is not possible to to declare more than one public class in a single java file, if we declare more than on public class then we have to same that file with more than one name that is not possible for all operating system.
+
+NOTE : write in terminal/command prompt for compilation "javac + filename" and for execution "java + main" class name.
+
+NOTE : Every java file is able to allow atmost one public element.
+
+
+5) Compilation of Java file
+______________________________
+
+What are the requirements to perform compilation?
+
+--> To check for developer mistakes or errors in a Java application.
+--> To convert a Java program from high-level code (source code) to low-level code (bytecode), which can be executed by the Java Virtual Machine (JVM).
+
+How to perform compilation?
+--> Open the Command Prompt.
+--> Navigate to the location where your Java file is saved using the cd (change directory) command.
+
+D:\core_java>javac filename.java
+What happens internally? Let’s recognize this process.
+
+
+--> When we install the operating system, the entire operating system is installed on the C drive, which also contains the Command Prompt. After installing Java software on 
+	the C drive, a Java folder is created. Inside the Java folder, two subfolders are created: jdk1.8.0 and jre8. Inside the jdk1.8.0 folder, there is a bin folder, and within the bin folder, Java commands such as javac, java, javap, javadoc, etc., are present.
+
+	Now, I want to create a Java application. To do this:
+
+	1) I will create a core_java folder inside the D drive.
+	2) Inside the core_java folder, I will create a file called FirstApp.java.
+	3) Inside FirstApp.java, I will write the following code:
+
+				class FirstApp {
+				    public static void main(String args[]) {
+				        System.out.println("First Java Application");
+				    }
+				}
+
+
+	Now, after creating this application, I need to compile this program. To compile the program, follow these steps:
+
+	1. Open the Command Prompt.
+	2. In the Command Prompt, go to the location where the Java file is located:
+	   D:\core_java
+	3. Use the following command to compile:
+	   javac FirstApp.java
+
+	What Happens Internally When You Run javac FirstApp.java?
+
+	- When you use javac FirstApp.java in the Command Prompt, the operating system checks for the javac command.
+	- It first searches for javac in its internal predefined command list.
+	- If javac is not available in the predefined commands list, the operating system will search for javac in the location referred to by the Path environment variable.
+	- If javac is still not found, the operating system will display the following message:
+	  'javac' is not recognized as an internal or external command, operable program or batch file.
+
+	Fixing the Path Issue:
+
+	To make javac available to the operating system, you need to set the Path environment variable by using this command:
+	set path = C:\Java\Jdk1.8.0\bin; (This is for temporary).
+
+	This will allow the operating system to locate the javac command in the bin folder of the JDK directory.
+
+	Compilation Process:
+
+	1. Once the javac command is found, the compiler will search for the FirstApp.java file in the current directory (D:\core_java).
+	   - If FirstApp.java is not found, the compiler will display the message:
+	     javac: file not found: FirstApp.java
+	2. If FirstApp.java exists, the compiler will begin the compilation process. It will read the file from the beginning to the end.
+	   - The compiler will check each line for syntax errors.
+	   - If there are any errors, they will be displayed in the Command Prompt.
+	   - If there are no errors, the compiler will generate the .class file.
+
+	How Many .class Files Are Generated?
+
+	The number of .class files generated depends on the number of classes, abstract classes, enums, and subclasses used in the source code. In the example above, since there is only one class (FirstApp), only one .class file will be generated: FirstApp.class.
+
+	By default, the .class file is created in the same location as the .java file.
+
+	If you want to generate the .class file in a different location, you can use the following command:
+	javac -d E:\anyfoldername FirstApp.java
+
+
+	Q) Is it possible to compile multiple Java files using a single javac command?
+
+	Yes, it is possible to compile multiple Java files using a single javac command.
+
+	To compile all Java files present in the current location:
+	D:\core_java>javac *.java
+
+	To compile all Java files that have a common prefix:
+	D:\core_java>javac Employee*.java
+
+	To compile all Java files that have a common suffix:
+	D:\core_java>javac *Address.java
+
+	To compile all Java files that have a common name:
+	D:\core_java>javac *Account*.java
