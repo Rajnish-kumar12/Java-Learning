@@ -166,3 +166,73 @@ What happens internally? Let’s recognize this process.
 
 	To compile all Java files that have a common name:
 	D:\core_java>javac *Account*.java
+
+6) Execution of Java file
+_____________________________
+
+    To execute a Java application, navigate to the location where the main class file exists. For example:
+
+    D:\core_java>java FirstApp
+
+    We must provide the main method's class name for executing the Java program.
+
+    ### Internal Execution Process:
+
+    1. When the above command is entered, the operating system recognizes it as a command. It searches for the java command in the internal predefined commands list.
+       - If the java command is not found in the predefined list, the operating system checks the Path environment variable.
+       - If the java command is located, the operating system executes it.
+
+    2. Execution of the java command activates the *Java Virtual Machine (JVM)*.
+       - The JVM takes the main method's class name (FirstApp) and searches for its corresponding .class file.
+
+    3. The .class file search occurs in the following order:
+       - *Current location*: The directory where the command is executed.
+       - *Java predefined library*: JVM checks the core libraries.
+       - *Location referred by the CLASSPATH environment variable*: If specified, JVM searches here.
+
+    4. If the .class file is not found in any of these locations:
+       - For Java 6 and earlier versions, the following exception is thrown:
+         
+         java.lang.NoClassDefFoundError: FirstApp
+         
+       - For Java 7 and later versions, the exception is:
+         
+         Error: Could not find or load main class FirstApp
+         
+
+    5. If you know the location of the .class file (e.g., it is located in a specific path), set the CLASSPATH environment variable to point to that path. Once the CLASSPATH is set, the JVM can locate and load the .class file.
+
+    ### Execution of the Main Method:
+
+    1. After finding and loading the .class file, the JVM checks if the main method exists in the loaded class.
+       - If the main method is missing:
+         - For Java 6 and earlier versions, the following exception is thrown:
+           
+           java.lang.NoSuchMethodError: main
+           
+         - For Java 7 and later versions, the exception is:
+           
+           Main method not found in class FirstApp, please define the main method as:
+           public static void main(String[] args)
+           
+
+    2. If the main method exists:
+       - The JVM creates a thread called the *main thread* to execute the main method.
+       - The main thread executes the entire body of the main method, including any statements like System.out.println().
+
+    3. Once the execution of the main method is complete:
+       - The main thread enters the dead state.
+       - The JVM recognizes that the program's execution is finished and shuts down.
+
+
+
+Q) What is a difference between path and classpath environment variables?
+--> The Path environment variable can be used to provide location details of Java commands like javac, java, javap, javah, etc., to the operating system, enabling the 
+    execution of these commands when used in the command prompt.
+
+    D:\core_java>set path=C:\Java\Jdk1.8.0\bin; -->  This sets the path to the bin folder where Java is installed on your system.
+    
+    NOTE: This simply provides information to the operating system about where Java is installed.
+
+--> The Classpath environment variable can be used to provide location information of the .class files, packages, or JAR files to the compiler and JVM, enabling them to access 
+    and execute the necessary resources in the current Java program.
