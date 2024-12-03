@@ -1,0 +1,4 @@
+Decrement Operator(--)
+--> To deccrease the value by one.
+a) Pre Decrement(--a)
+b) Post Decrement(a++)

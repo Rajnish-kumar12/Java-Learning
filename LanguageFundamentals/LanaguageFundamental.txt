@@ -1,0 +1,53 @@
+Language Fundamentals
+-----------------------------
+To prepare java applications, we need some building blocks which are not created by the developers, which must be provided by the programming language by default, such building blocks are called as 'Language Fundamentals'.
+
+To prepare basics java applications, we need the following language fundamentals:
+1) Tokens
+2) Data types
+3) Type Casting
+4) Java Statements
+
+1) Tokens
+-----------
+
+Lexemes : Logical individual units in java programming called as lexemes.
+Tokens : Collection of lexemes comes under a particular group are called as token.
+
+EX:
+   int a = b + c * d;
+
+   -->  Lexemes in the statement:
+		int
+		a
+		=
+		b
+		+
+		c
+		*
+		d
+		;
+		Count: There are 9 lexemes.
+
+		Definition: Tokens are categorized representations of lexemes based on their types.
+
+		Tokens in the statement:
+
+		int: Keyword
+		a: Identifier
+		=: Assignment Operator
+		b: Identifier
+		+: Arithmetic Operator
+		c: Identifier
+		*: Arithmetic Operator
+		d: Identifier
+		;: Punctuation (Separator)
+		Count: There are 9 tokens.
+
+		Keyword (int)
+		Identifier (a, b, c, d)
+		Assignment Operator (=)
+		Arithmetic Operator (+, *)
+		Punctuation (Separator) (;)
+		
+		Count: There are 5 types of tokens.
