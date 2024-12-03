@@ -1,0 +1,33 @@
+/*
+ * Operators is a symbol, which perform a particular operation over the provided operands.
+ * To prepare java applications, JAVA has provided the following set of operators
+ * 
+ * 1) Arithmetic Operators
+ * ------------------------
+ * +, -, /, *, %, ++, --
+ * 
+ * 2) Assignment Operators
+ * -------------------------
+ * =, +=, -=, /=, %= *= etc..
+ * 
+ * 3) Compariason Operators
+ * --------------------------
+ * ==, !=, <, >, <=, >=
+ * 
+ * 4) Boolean Logical Operators
+ * -----------------------------
+ * &, |, ^
+ * 
+ * 5) Bitwise Logical Operators
+ * ------------------------------
+ * &, |, ^, <<, >>
+ * 
+ * 6) Ternary Operator
+ * --------------------
+ * expression1?expression2:expression3;
+ * 
+ * 7) Short Circuit Operator
+ * --------------------------
+ * &&, ||
+ * 
+ */
