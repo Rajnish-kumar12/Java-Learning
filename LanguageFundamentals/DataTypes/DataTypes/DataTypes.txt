@@ -69,7 +69,7 @@ byte   ------> Byte
 short  ------> Short
 int    ------> Integer
 long   ------> Long
-float  ------> float
+float  ------> Float
 double ------> Double
 char   ------> Character
 bool   ------> Boolean
@@ -82,4 +82,4 @@ class Range
         println(Byte.MAX_VALUE);
     }
 }
-Above way u can find the min and mix value of the premitive dataypes.
+Above way u can find the min and max value of the primitive dataypes.
