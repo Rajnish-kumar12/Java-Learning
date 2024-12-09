@@ -1,0 +1,25 @@
+--> Statement is a collection of expression.
+--> To prepare java application java has provided the following statements.
+
+1) General Purpose statements
+-------------------------------
+--> Declaring classes, abstract classes, interfaces and so on.
+--> Declare variable, methods and so on.
+--> Creating objects.
+--> Accessing variable and methods.
+
+2) Conditional statements
+-------------------------------
+if, switch.
+
+3) Iterative statements
+-------------------------------
+for, while, do while.
+
+4) Transfer statements
+--------------------------------
+Break, Continue, Return.
+
+5) Exception Handling statements
+---------------------------------
+Throw, Try, Catch, Finally
