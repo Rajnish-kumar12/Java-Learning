@@ -34,14 +34,14 @@ class Test
         System.out.println(b+" "+i);
     }
 }
-// class Test1
-// {
-//     public static void main(String[] args) {
-//         int i = 10;
-//         byte a = i;
-//         System.out.println(a); // error
-//     }
-// }
+class Test1
+{
+    public static void main(String[] args) {
+        int i = 10;
+        byte a = i;
+        System.out.println(a); // error
+    }
+}
 class Test2
 {
     public static void main(String[] args) {
@@ -62,14 +62,14 @@ class Test3
  * Overall lower to higer is possible, higher to lower is not possible.
  */
 
-// class Test4
-// {
-//     public static void main(String[] args) {
-//         byte a = 128;
-//         System.out.println(a); //error , Incomatible possible lossy conversion from int to byte.here 128 is treated as higher data
-//                                 // which is greater then byte it means int.
-//     }
-// }
+class Test4
+{
+    public static void main(String[] args) {
+        byte a = 128;
+        System.out.println(a); //error , Incomatible possible lossy conversion from int to byte.here 128 is treated as higher data
+                                // which is greater then byte it means int.
+    }
+}
 
 class Test5
 {
