@@ -1,0 +1,3 @@
+These statements are able to execute a block of instructions on the basis of particular Condition.
+1) If 
+2) Switch
