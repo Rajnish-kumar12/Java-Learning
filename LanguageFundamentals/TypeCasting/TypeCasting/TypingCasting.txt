@@ -1,0 +1,49 @@
+The process of converting data from one data type from another data type is called as type casting.
+
+In java, there are two types of typecasting.
+
+1) Primitive data types type casting.
+2) user defined data types type casting.
+--> The process of converting data from one user defined data type to another user defined data types is called 
+    use defined data types type casting, we  must require extends or implements relation to perform user defined
+    data type casting.
+
+1) Primitive data types types casting
+---------------------------------------
+--> The process of converting data from one primitive data type to another primive data type is called as 
+    primitive data types type casting.
+    In, java there are two types of primitive data types type casting.
+
+    a) Implicit type casting.
+    b) Explicit type casting.
+
+a) Implicit type casting
+----------------------------
+--> The process of converting from data from lower data type to higher data type is called as implicit type cating.
+
+Q) Here which one is lower data type and which one is higher data type?
+--> This depends on which data type able to store more data is called higher data type,
+    This is not based on which have more memory is higher data types.memory size is not the point to decide
+    that which is higher and which is lower.
+
+java provided one chart which shows which data type is higher.
+
+ 1        2         4        8        4         8
+byte --> short --> int --> long --> float --> double
+                    ^
+                    |
+                   char(2)
+
+Above chart means we can implicit convert from byte to short, int to long, char to int,and so on, means lower can converted into any
+higher.
+
+b) Explicit type casting
+-------------------------------
+--> The process of converting higher data type to lower data type is called explicit type casting.
+    To perform explicit type casting, java has provided pattern
+
+    P a = (q) b;
+    b = variable of higer data type
+    a = variable of lower data type
+    where q must be same as or lower than p, as per implicit type casting.
+    () = cast operator

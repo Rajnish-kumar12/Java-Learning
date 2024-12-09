@@ -1,0 +1,85 @@
+Java is strictly a typed programming language, where in JAVA applications before representing data first we have to specify
+which types of data we are representing.In this context, to specify the type of data before representation we must use "Data Types".
+
+EX: a = 10; -- invalid
+    int a = 10; -- valid
+    int b;
+        b = 20; -- valid
+       
+Advantages of data types
+---------------------------
+
+1) we are able to identify memory size to store data on the basis of the data types.
+2) we are able to identify range values to assign to the variables.
+
+To prepare Java applications, java has provided the following data types:
+
+1) primitive data types / primary data types
+------------------------------------------------
+
+ a) Numeric data types
+ ----------------------------
+    i)  Integral data types
+    -----------------------
+        byte   --> 1 byte  = 0
+        short  --> 2 bytes = 0
+        int    --> 4 bytes = 0
+        long   --> 8 bytes = 0
+
+    ii) Non Integral data types
+    ---------------------------
+        float  --> 4 bytes = 0.0f
+        double --> 8 bytes = 0.0 
+         
+ b) Non-Numeric data types
+ ------------------------------
+        char --> 2 bytes = ' '(single space)
+        boolean --> 1 bit = false
+
+2) user defined data types . secondary data types
+----------------------------------------------------
+        class
+        enum
+        arrays
+        interfaces
+        etc.......
+
+Note: default value for user defined data types are null.
+      No size is fixed for the user defined data types.
+
+
+To calculate ranges of the data types java has provided the formulae:
+
+ n-1        n-1
+-2     to  2    -   1  , where n is the number of bits.
+
+                                 7       7
+Ex: byte = 1 byte => 8 bits => -2   to -2   -   1 =>  -128 to 127 .
+
+Note : Above formulae is applicable for only integral data types, not applicable for remaining data types.
+
+To calculate range value for the remaining data types, java have provided two constants each and every wrapper classes.
+
+MIN_VALUE
+MAX_VALUE
+
+Note : Wrapper classes are the class representation of the primitive data types.
+
+byte   ------> Byte
+short  ------> Short
+int    ------> Integer
+long   ------> Long
+float  ------> float
+double ------> Double
+char   ------> Character
+bool   ------> Boolean
+
+class Range
+{
+    psvm(s[]args)
+    {
+        println(Byte.MIN_VALUE);
+        println(Byte.MAX_VALUE);
+    }
+}
+Above way u can find the min and mix value of the premitive dataypes.
