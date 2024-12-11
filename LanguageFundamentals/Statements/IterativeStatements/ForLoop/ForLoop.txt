@@ -1,0 +1,33 @@
+Syntax
+---------
+
+class ForLoopSyntax
+{
+    public static void main(string[] args)
+    {
+        for(int i = 0;i<10;i++)
+        {
+            System.out.println(i);
+        }
+    }
+}
+
+op:
+-----
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+NO OF EXECUTION OF EXPRESSION INSIDE FOR LOOP ARE:
+
+    int i = 0; --> 1 time
+    i<10; --> 11 time (10 times true and 1 time false)
+    i++; --> 10 times
+    System.out.println(i); --> 10 times

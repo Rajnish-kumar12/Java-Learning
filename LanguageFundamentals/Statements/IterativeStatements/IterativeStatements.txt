@@ -1,0 +1,4 @@
+These statements are able to allow to execute a block of instruction repeatedly on the basis of conditional expression.
+Ex: for
+    while
+    do while

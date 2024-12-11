@@ -1,0 +1,32 @@
+--> In java applications if we know the number of iterations over the loop body in advance before writting the loops
+    there we have to use for loop.
+
+    Ex: If we want to read elements from an array there we have to use "for" loop.
+        int[] a = {1,2,3,4,5};
+        Size: a.length = 5; start index:0 and end index is :4.
+    
+        for(int i = 0;i<a.length;i++)
+        {
+            sop(a[i]);
+        }
+NOTE: 1) we must declare a seperate variable for looping purppose.
+      2) At each and every iteration we must execute a conditional expression.
+      3) At each and every iteration we must perform loop variable incrementation or decrementation operation.
+      4) In above approach we are able to get array element by providing index value explicitely in this case
+         there may be a chance to get array index out of bound exception.
+
+To overcome this problems, JDK1.5 version has provided an enhancement over the for loop that is for-each loop.
+Syntax:
+for(Array_Data_Type var_name:Array_Ref_var)
+{
+    ------instruction------
+}
+Ex:
+int[] a = {1,2,3,4,5};
+for(int x:a)
+{
+    sop(x);
+}
+
+Note: for-each loop is applicable for retrieving elements from the arrays and from collection only, it is not applicable for
+      normal iterations over the code.
