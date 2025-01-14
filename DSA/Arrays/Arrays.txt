@@ -1,0 +1,37 @@
+why we need arrays?
+what is the syntax of arrays?
+memory management for arrays in java?
+dynamic memory allocation?
+input/output from arrays.
+array list.
+
+why we need arrays
+---------------------------------
+--> We need arrays in Java to store multiple values of the same data type in a single variable,
+    enabling efficient management and access of related data.
+
+what is the syntax of arrays?
+---------------------------------
+
+--> data_type[] variable = new data_type[size];
+
+    eg) store five value in single variable.
+
+        int[] arr = new int[5];
+
+        OR,
+
+        int[] array = {1,2,3,4,5};
+
+        int[] arr --> it is the only declaration of the array at this time no array object created in memory.
+                      it only define that "arr" is a reference variable which points to the integer array.
+                      this happens at runtime.
+
+        new int[5] --> here new keyword allocate the memory and int[] specify that it stores only integer value.
+                       this happend at memory allocation time.
+                       it creating the object in the heap memory.
+                       this thing happens at runtime(dynamic memory allocation).
+
+Note:: In java array object is may not be continuous it depends on jvm.
+
+Note:: New is used to create an object in heap memory.
