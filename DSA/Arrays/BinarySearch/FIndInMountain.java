@@ -10,8 +10,8 @@ package DSA.Arrays.BinarySearch;
 public class FIndInMountain {
 
     public static void main(String[] args) {
-        int[] arr = { 0, 1, 3, 4, 5, 7, 9, 3, 1, 0 };
-        int target = 1;
+        int[] arr = { 1, 2, 3, 4, 5, 3, 1 };
+        int target = 2;
         System.out.println(findMinimumIndex(arr, target));
     }
 
@@ -28,9 +28,12 @@ public class FIndInMountain {
         }
         int first = checkIncreasingArray(arr, target, startIndex);
         int second = checkDecreasingArray(arr, target, startIndex);
-        return (first >= second) ? second : first;
+        return (first != -1) ? first : second;
     }
 
+    /*
+     * Check element in increasing array
+     */
     static int checkIncreasingArray(int[] arr, int target, int endIndex) {
         int startIndex = 0;
         while (startIndex <= endIndex) {
@@ -46,6 +49,9 @@ public class FIndInMountain {
         return -1;
     }
 
+    /*
+     * Check element in decreasing array
+     */
     static int checkDecreasingArray(int[] arr, int target, int startIndex) {
         int endIndex = arr.length - 1;
         while (startIndex <= endIndex) {
