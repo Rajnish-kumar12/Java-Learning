@@ -12,8 +12,9 @@ public class SearchInRotatedArray {
 
     public static void main(String[] args) {
         // int[] arr = { 0, 1, 2, 4, 5, 6, 7 };
-        int[] arr = { 4, 5, 6, 7, 0, 1, 2 };
-        int target = 7;
+        int[] arr = { 3, 1 };
+        // int[] arr = { 4, 5, 6, 7, 0, 1, 2 };
+        int target = 3;
         System.out.println(findTarget(arr, target));
     }
 
@@ -22,27 +23,40 @@ public class SearchInRotatedArray {
      */
     static int findTarget(int[] arr, int target) {
         int pivot = findPivot(arr);
+        System.out.println("pivot = " + pivot);
         if (pivot == -1) {
             return search(arr, target, 0, arr.length - 1);
         }
         // int first = search(arr, target, 0, pivot);
         // int second = search(arr, target, pivot, arr.length - 1);
         int element = (search(arr, target, 0, pivot) != -1) ? search(arr, target, 0, pivot)
-                : search(arr, target, pivot, arr.length - 1);
+                : search(arr, target, pivot + 1, arr.length - 1);
         return element;
         // return (first != -1) ? first : second;
 
     }
 
     static int search(int[] arr, int target, int startIndex, int endIndex) {
+        System.out.println("start = " + startIndex);
+        System.out.println("end = " + endIndex);
         while (startIndex <= endIndex) {
             int mid = (startIndex + endIndex) / 2;
-            if (target > arr[mid]) {
-                startIndex = mid + 1;
-            } else if (target < arr[mid]) {
-                endIndex = mid - 1;
+            if (arr[startIndex] < arr[endIndex]) {
+                if (target > arr[mid]) {
+                    startIndex = mid + 1;
+                } else if (target < arr[mid]) {
+                    endIndex = mid - 1;
+                } else {
+                    return mid;
+                }
             } else {
-                return mid;
+                if (target > arr[mid]) {
+                    endIndex = mid - 1;
+                } else if (target < arr[mid]) {
+                    startIndex = mid + 1;
+                } else {
+                    return mid;
+                }
             }
         }
         return -1;
