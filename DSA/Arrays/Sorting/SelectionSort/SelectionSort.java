@@ -30,5 +30,5 @@ public class SelectionSort {
 
 /*
  * Time complexity is : worst case O(n*n)
- * Best case O(n)
+ * Best case O(n) complexity
  */
