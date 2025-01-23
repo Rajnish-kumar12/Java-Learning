@@ -5,6 +5,8 @@
  * and ending position of a given target value.
  * If target is not found in the array, return [-1, -1].
  * 
+ * https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/?envType=problem-list-v2&envId=binary-search
+ * 
  */
 package DSA.Arrays.BinarySearch;
 
@@ -13,35 +15,55 @@ import java.util.Arrays;
 public class FirstLastPosition {
 
     public static void main(String[] args) {
-        int[] arr = { 5, 7, 7, 8, 8, 10 };
+        int[] arr = { 5, 7, 7, 8, 8, 8, 8, 10 };
         int target = 8;
         int[] result = findOccurance(arr, target);
         System.out.println(Arrays.toString(result));
     }
 
     static int[] findOccurance(int[] arr, int target) {
-        int first = findPosition(arr, target, true);
-        int last = findPosition(arr, target, false);
+        int first = findFirstPosition(arr, target);
+        int last = findLastPosition(arr, target);
         return new int[] { first, last };
     }
 
-    static int findPosition(int[] arr, int target, boolean x) {
+    /*
+     * Find starting index
+     */
+    static int findFirstPosition(int[] arr, int target) {
         int startIndex = 0;
         int endIndex = arr.length - 1;
         int result = -1;
         while (startIndex <= endIndex) {
             int mid = (startIndex + endIndex) / 2;
-            if (arr[mid] == target) {
-                result = mid;
-                if (x) {
-                    endIndex = mid - 1;
-                } else {
-                    startIndex = mid + 1;
-                }
-            } else if (arr[mid] > target) {
+            if ((arr[mid]) == target) {
                 endIndex = mid - 1;
-            } else {
+                result = mid;
+            } else if (arr[mid] < target) {
                 startIndex = mid + 1;
+            } else {
+                endIndex = mid - 1;
+            }
+        }
+        return result;
+    }
+
+    /*
+     * Finding last index
+     */
+    static int findLastPosition(int[] arr, int target) {
+        int startIndex = 0;
+        int endIndex = arr.length - 1;
+        int result = -1;
+        while (startIndex <= endIndex) {
+            int mid = (startIndex + endIndex) / 2;
+            if ((arr[mid]) == target) {
+                startIndex = mid + 1;
+                result = mid;
+            } else if (arr[mid] < target) {
+                startIndex = mid + 1;
+            } else {
+                endIndex = mid - 1;
             }
         }
         return result;

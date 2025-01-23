@@ -13,7 +13,7 @@ package DSA.Arrays.BinarySearch;
 public class PeakIndex {
 
     public static void main(String[] args) {
-        int[] arr = { 0, 1, 0 };
+        int[] arr = { 0, 1, 3, 7, 0 };
         System.out.println("The peak element index are : " + findPeak(arr));
     }
 

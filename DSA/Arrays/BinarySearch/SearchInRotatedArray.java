@@ -14,7 +14,7 @@ public class SearchInRotatedArray {
         // int[] arr = { 0, 1, 2, 4, 5, 6, 7 };
         int[] arr = { 3, 1 };
         // int[] arr = { 4, 5, 6, 7, 0, 1, 2 };
-        int target = 3;
+        int target = 1;
         System.out.println(findTarget(arr, target));
     }
 
@@ -41,25 +41,16 @@ public class SearchInRotatedArray {
         System.out.println("end = " + endIndex);
         while (startIndex <= endIndex) {
             int mid = (startIndex + endIndex) / 2;
-            if (arr[startIndex] < arr[endIndex]) {
-                if (target > arr[mid]) {
-                    startIndex = mid + 1;
-                } else if (target < arr[mid]) {
-                    endIndex = mid - 1;
-                } else {
-                    return mid;
-                }
+            if (target > arr[mid]) {
+                startIndex = mid + 1;
+            } else if (target < arr[mid]) {
+                endIndex = mid - 1;
             } else {
-                if (target > arr[mid]) {
-                    endIndex = mid - 1;
-                } else if (target < arr[mid]) {
-                    startIndex = mid + 1;
-                } else {
-                    return mid;
-                }
+                return mid;
             }
         }
         return -1;
+
     }
 
     /*

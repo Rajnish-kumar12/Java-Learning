@@ -18,7 +18,7 @@ class Increment {
         System.out.println(b);
     }
 }
-//decrement class
+
 class Decrement {
     public static void main(String[] args) {
         int a = 10;
