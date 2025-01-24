@@ -11,19 +11,45 @@ public class SplitArrayLargetSum2 {
         System.out.println(findMinMax(arr, k));
     }
 
+    /*
+     * Find the minMax.
+     */
     static int findMinMax(int[] arr, int k) {
         int start = findStart(arr);
         int end = findEnd(arr);
-        System.out.println(start);
-        System.out.println(end);
+        int ans = start;
         while (start <= end) {
             int mid = (start + end) / 2;
+            int part = splitArrayKTimes(arr, mid);
+            if (part > k) {
+                start = mid + 1;
+            } else {
+                ans = mid;
+                end = mid - 1;
+            }
         }
-        return 1;
+        return ans;
     }
 
     /*
-     * Give the start range for the minMax
+     * Function to split the array in k times
+     */
+    static int splitArrayKTimes(int[] arr, int mid) {
+        int sum = 0;
+        int count = 1;
+        for (int i = 0; i < arr.length; i++) {
+            if (sum + arr[i] > mid) {
+                sum = arr[i];
+                count++;
+            } else {
+                sum = sum + arr[i];
+            }
+        }
+        return count;
+    }
+
+    /*
+     * Give the start range for the ans(minMax)
      */
     static int findStart(int[] arr) {
         int max = arr[0];
@@ -36,7 +62,7 @@ public class SplitArrayLargetSum2 {
     }
 
     /*
-     * Give the end range for the minMax
+     * Give the end range for the ans(minMax)
      */
     static int findEnd(int[] arr) {
         int sum = 0;
