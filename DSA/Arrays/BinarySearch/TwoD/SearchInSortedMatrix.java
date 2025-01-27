@@ -17,8 +17,12 @@ import java.util.Arrays;
 public class SearchInSortedMatrix {
 
     public static void main(String[] args) {
-        int[][] arr = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16 } };
-        int target = 2;
+        int[][] arr = {
+            {1, 3, 5, 7},
+            {10, 11, 16, 20},
+            {23, 30, 34, 50}
+        };
+        int target = 7;
         System.out.println(Arrays.toString(search(arr, target)));
     }
 
@@ -54,17 +58,18 @@ public class SearchInSortedMatrix {
         if (arr[rowStart + 1][cMid] == target) {
             return new int[] { rowStart + 1, cMid };
         }
-        if (target <= arr[rowStart][cMid - 1]) {
+        if (cMid - 1 >= 0 &&target <= arr[rowStart][cMid - 1]) {
             return simpleBinarySearch(arr, rowStart, 0, cMid - 1, target);
         }
-        if (target >= arr[rowStart][cMid + 1] && target <= arr[rowStart][col - 1]) {
+        if (cMid + 1 < col &&target >= arr[rowStart][cMid + 1] && target <= arr[rowStart][col - 1]) {
             return simpleBinarySearch(arr, rowStart, cMid + 1, col - 1, target);
         }   
-        if (target <= arr[rowStart + 1][cMid - 1]) {
+        if (cMid - 1 >= 0&&target <= arr[rowStart + 1][cMid - 1]) {
             return simpleBinarySearch(arr, rowStart + 1, 0, cMid - 1, target);
-        } else {
+        } else if(cMid + 1 < col) {
             return simpleBinarySearch(arr, rowStart + 1, cMid + 1, col - 1, target);
         }
+        return new int[]{-1,-1};
     }
 
     /*
