@@ -20,9 +20,15 @@ public class SearchInString {
     }
 
     static String searchStudent(String[] students, String name) {
-        for (String checkName : students) {
-            if (checkName.equals(name)) {
-                return checkName;
+        // for (String checkName : students) {
+        // if (checkName.equals(name)) {
+        // return checkName;
+        // }
+        // }
+        //we can also use above commented code to search in string array.
+        for (int i = 0; i < students.length - 1; i++) {
+            if (students[i].equals(name)) {
+                return "result found";
             }
         }
         return "Not Found";
