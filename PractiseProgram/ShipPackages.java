@@ -26,12 +26,20 @@ public class ShipPackages {
     static int findSplitDaysInMid(int[] weights, int mid) {
         int sum = 0;
         int count = 1;
-        for (int i = 0; i < weights.length; i++) {
-            if (weights[i] + sum > mid) {
-                sum = weights[i];
+        // for (int i = 0; i < weights.length; i++) {
+        // if (weights[i] + sum > mid) {
+        // sum = weights[i];
+        // count++;
+        // } else {
+        // sum = sum + weights[i];
+        // }
+        // }
+        for (int element : weights) {
+            if (element + sum > mid) {
+                sum = element;
                 count++;
             } else {
-                sum = sum + weights[i];
+                sum += element;
             }
         }
         return count;
@@ -39,9 +47,14 @@ public class ShipPackages {
 
     static int findPossibleStartWeight(int[] weights) {
         int max = weights[0];
-        for (int i = 1; i < weights.length; i++) {
-            if (weights[i] > max) {
-                max = weights[i];
+        // for (int i = 1; i < weights.length; i++) {
+        // if (weights[i] > max) {
+        // max = weights[i];
+        // }
+        // }
+        for (int i : weights) {
+            if (i > max) {
+                max = i;
             }
         }
         return max;
@@ -49,8 +62,11 @@ public class ShipPackages {
 
     static int findPossibleEndWeight(int[] weights) {
         int sum = 0;
-        for (int i = 0; i < weights.length; i++) {
-            sum = sum + weights[i];
+        // for (int i = 0; i < weights.length; i++) {
+        // sum = sum + weights[i];
+        // }
+        for (int i : weights) {
+            sum += i;
         }
         return sum;
     }
