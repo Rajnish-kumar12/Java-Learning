@@ -1,27 +1,19 @@
-/*
- * https://leetcode.com/problems/split-array-largest-sum/description/?envType=problem-list-v2&envId=binary-search
- */
-package DSA.Arrays.BinarySearch;
-
-public class SplitArrayLargetSum2 {
+public class SplitArraylargestSum {
 
     public static void main(String[] args) {
-        int[] arr = { 7, 2, 5, 10, 8 };
-        int k = 2;
-        System.out.println(findMinMax(arr, k));
+        int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        int k = 5;
+        System.out.println("The Minimum of maximum are : " + findMinMax(arr, k));
     }
 
-    /*
-     * Find the minMax.
-     */
     static int findMinMax(int[] arr, int k) {
         int start = findStart(arr);
         int end = findEnd(arr);
-        int ans = start;
+        int ans = arr[0];
         while (start <= end) {
             int mid = (start + end) / 2;
-            int part = splitArrayKTimes(arr, mid);
-            if (part > k) {
+            int splitArray = splitArray(arr, mid);
+            if (splitArray > k) {
                 start = mid + 1;
             } else {
                 ans = mid;
@@ -32,13 +24,14 @@ public class SplitArrayLargetSum2 {
     }
 
     /*
-     * Function to split the array in k times
+     * splitt array in k parts with the maximum value takes less than or equal to
+     * mid.
      */
-    static int splitArrayKTimes(int[] arr, int mid) {
+    static int splitArray(int[] arr, int mid) {
         int sum = 0;
         int count = 1;
         for (int i = 0; i < arr.length; i++) {
-            if (sum + arr[i] > mid) {
+            if (arr[i] + sum > mid) {
                 sum = arr[i];
                 count++;
             } else {
@@ -49,11 +42,11 @@ public class SplitArrayLargetSum2 {
     }
 
     /*
-     * Give the start range for the ans(minMax)
+     * Find start value of range that should be the answer.
      */
     static int findStart(int[] arr) {
         int max = arr[0];
-        for (int i = 1; i < arr.length - 1; i++) {
+        for (int i = 1; i < arr.length; i++) {
             if (arr[i] > max) {
                 max = arr[i];
             }
@@ -62,7 +55,7 @@ public class SplitArrayLargetSum2 {
     }
 
     /*
-     * Give the end range for the ans(minMax)
+     * Find end value of the range that should be the answer.
      */
     static int findEnd(int[] arr) {
         int sum = 0;
@@ -72,6 +65,3 @@ public class SplitArrayLargetSum2 {
         return sum;
     }
 }
-/*
- * key point --> Maximum sum of any subarray is less than or equal to mid.
- */
