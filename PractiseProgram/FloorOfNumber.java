@@ -1,20 +1,20 @@
 /*
- * Find ceiling of a number in array.
+ * Find floor of a number in an array
  * 
- * The ceiling of a number is the smallest number that is greater than or equal to the target element.
+ * Floor of a number is a number which is biggest number that is smaller than or
+ * equal to the target number.
  * 
  */
-
-public class CeilingOfNumber {
+public class FloorOfNumber {
 
     public static void main(String[] args) {
         int[] arr = { 2, 3, 5, 10, 15, 18, 20 };
-        int target = 4;
-        System.out.println(findCellingNumber(arr, target));
+        int target = 12;
+        System.out.println(findFloorNumber(arr, target));
     }
 
-    static int findCellingNumber(int[] arr, int target) {
-        if (target > arr[arr.length - 1]) {
+    static int findFloorNumber(int[] arr, int target) {
+        if (target < arr[0]) {
             return -1;
         }
         int start = 0;
@@ -29,6 +29,6 @@ public class CeilingOfNumber {
                 end = mid - 1;
             }
         }
-        return arr[start];
+        return arr[end];
     }
 }
