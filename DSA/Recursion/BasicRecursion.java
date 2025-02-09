@@ -21,14 +21,13 @@ public class BasicRecursion {
         if (n == 5) {
             System.out.println(n);
             return;
-        } else {
-            System.out.println(n);
-            /*
-             * Recursive call
-             * --> If you are calling a function again and again, you can treat it as a
-             * seperate call in the stack
-             */
-            print(n + 1);
         }
+        System.out.println(n);
+        /*
+         * Recursive call
+         * --> If you are calling a function again and again, you can treat it as a
+         * seperate call in the stack
+         */
+        print(n + 1);
     }
 }
